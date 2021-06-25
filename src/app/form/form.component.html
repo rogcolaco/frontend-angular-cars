@@ -1,0 +1,44 @@
+<div>
+    <div class="container">
+      <div class="field" [formGroup]="carForm" (ngSubmit)="onSubmit()">
+        <div>
+          <label class="label" for="">Modelo:</label>
+          <div class="control">
+            <input formControlName="model" class="input" type="text" placeholder="Informe o Modelo do Veículo">
+          </div>
+        </div>
+  
+        <div>
+          <label class="label" for="">Cor</label>
+          <div class="control">
+            <input formControlName="color" class="input" type="text" placeholder="Cor Predominante">
+          </div>
+        </div>
+  
+        <div>
+          <label class="label" for="">Placa</label>
+          <div class="control">
+            <input formControlName="plate" class="input" type="text" placeholder="Informe a Placa">
+          </div>
+        </div>
+  
+        <div>
+          <label class="label" for="">Kilometragem</label>
+          <div class="control">
+            <input formControlName="km" class="input" type="text" placeholder="Apenas Valores Inteiros">
+          </div>
+        </div>
+  
+        <div class="buttons" *ngIf="router.url === '/cadastro'">
+          <button (click)="newCar()">Cadastrar</button>
+          <button><a routerLink="">Voltar</a></button>
+        </div>
+  
+        <div class="buttons" *ngIf="router.url !== '/cadastro'">
+          <button (click)="updateCar()">Alterar Registro</button>
+          <button (click)="deleteCar()">Deletar Registro</button>
+          <button><a routerLink="">Voltar</a></button>
+        </div>
+      </div>
+    </div>
+  </div>

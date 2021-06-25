@@ -1,0 +1,27 @@
+<div>
+    <div class="container">
+      <h1 class="subtitle is-1" *ngIf="carList.length > 0">Veículos Cadastrados</h1>
+      <h1 class="subtitle is-1" *ngIf="carList.length == 0">Nenhum Carro Cadastrado</h1>
+      <div class="carsBody">
+        <div class="card" *ngFor="let c of carList" (click)='selectCar(c)'>
+          <div class="card-info">
+            <span class="card-info-title">Modelo:</span>
+            <span class="card-info-detail">{{c.model}}</span>
+          </div>
+          <div class="card-info">
+            <span class="card-info-title">Cor:</span>
+            <span class="card-info-detail">{{c.color}}</span>
+          </div>
+          <div class="card-info">
+            <span class="card-info-title">Placa:</span>
+            <span class="card-info-detail">{{c.plate}}</span>
+          </div>
+          <div class="card-info">
+            <span class="card-info-title">Kilometragem:</span>
+            <span class="card-info-detail">{{c.km}}</span>
+          </div>
+        </div>
+      </div>
+      <button><a routerLink="/cadastro">Cadastrar Registro</a></button>
+    </div>
+  </div>
