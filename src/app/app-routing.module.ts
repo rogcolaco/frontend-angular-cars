@@ -4,9 +4,9 @@ import { CardCarComponent } from './card-car/card-car.component';
 import { FormComponent } from './form/form.component';
 
 const routes: Routes = [
-  { path: 'cadastro', component: FormComponent},
+  { path: 'frontend-angular-cars/cadastro', component: FormComponent},
   { path: '', component: CardCarComponent},
-  { path: 'selected/:id', component: FormComponent}
+  { path: 'frontend-angular-cars/selected/:id', component: FormComponent}
 ];
 
 @NgModule({
