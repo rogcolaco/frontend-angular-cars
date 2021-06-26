@@ -42,7 +42,7 @@ export class FormComponent implements OnInit {
   deleteCar(): void{
     this.carService.delete(this.selectedCarById._id).subscribe( res => {
       res.ok ? alert('Registro Deletado com Sucesso') : alert('Falha ao Apagar Registro');
-      location.assign('/');
+      location.assign('/frontend-angular-cars/');
     });
   }
 
