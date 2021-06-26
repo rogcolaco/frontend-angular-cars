@@ -72,6 +72,7 @@ export class FormComponent implements OnInit {
     if (this.carForm.valid){
       return true;
     } else {
+      console.log(this.carForm.errors);
       alert('Precha o formulário com valores válidos');
       return false;
     }
