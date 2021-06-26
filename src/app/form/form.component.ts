@@ -25,7 +25,7 @@ export class FormComponent implements OnInit {
     if (this.checkForm()){
       this.carService.addCar(this.carForm.value).subscribe( res => {
         res.ok ? alert ('Veículo Cadastrado com Sucesso.') : alert ('Falha ao Acessar Banco de Dados.');
-        location.assign('/');
+        location.assign('/frontend-angular-cars/');
       });
     }
   }
@@ -34,7 +34,7 @@ export class FormComponent implements OnInit {
     if (this.checkForm()){
       this.carService.update(this.carForm.value, this.selectedCarById._id).subscribe( res => {
         res.ok ? alert ('Registro Alterado com Sucesso') : alert('Falha ao Alterar Registro');
-        location.assign('/');
+        location.assign('/frontend-angular-cars/');
       });
     }
   }
@@ -47,11 +47,8 @@ export class FormComponent implements OnInit {
   }
 
   getId(): void {
-    console.log('here');
     this.selectedId = (this.router.url.split('/')[2]);
-    console.log(this.selectedId);
     this.carService.getCar(this.selectedId).subscribe((car: Car) => {
-      console.log(this.selectedId);
       this.selectedCarById = car;
       this.carForm.setValue ({
         model: this.selectedCarById.model,
@@ -63,7 +60,6 @@ export class FormComponent implements OnInit {
   }
 
   initForm(): void{
-    console.log('init');
     this.carForm = new FormGroup ({
       model: new FormControl(null, [Validators.required, Validators.pattern('[A-Za-zÀ-ü0-9]+')]),
       color: new FormControl (null, [Validators.required, Validators.pattern('[A-Za-zÀ-ü]+')]),
@@ -87,11 +83,8 @@ export class FormComponent implements OnInit {
 
   ngOnInit(): void {
     this.initForm();
-    console.log('pre-if');
     if (this.router.url !== '/frontend-angular-cars/cadastro'){
-      console.log('In-if');
       this.getId();
     }
-    console.log('out-if');
   }
 }
