@@ -3,7 +3,8 @@ Projeto de Frontend em angular desenvolvido para a disciplina de Tópicos da Com
 Instituto Federal de Ciência e Tecnologia de São Paulo (IFSP) - *Campus* São Carlos.
 
 # Backend
-Antes de iniciar a utlização do projeto, [acessar o servidor de backend](https://bdtc2-3002837.glitch.me)
+Antes de iniciar a utlização do projeto, [acessar o servidor de backend](https://bdtc2-3002837.glitch.me)  
+[Acesse aqui o repositório do backend do projeto](https://github.com/rogcolaco/backend-nodejs-tc2)
 
 # Endereço do Projeto no github pages
 [https://rogcolaco.github.io/frontend-angular-cars/](https://rogcolaco.github.io/frontend-angular-cars/)
