@@ -25,7 +25,7 @@ export class FormComponent implements OnInit {
     if (this.checkForm()){
       this.carService.addCar(this.carForm.value).subscribe( res => {
         res.ok ? alert ('Veículo Cadastrado com Sucesso.') : alert ('Falha ao Acessar Banco de Dados.');
-        location.assign('/frontend-angular-cars/');
+        location.assign('frontend-angular-cars/');
       });
     }
   }
