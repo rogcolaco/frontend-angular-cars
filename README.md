@@ -1,4 +1,11 @@
 # CarsProject
+Projeto de Frontend em angular desenvolvido para a disciplina de Tópicos da Computação 2 (TC2) do curso de Análise e desenvolvimento de sistemas do 
+Instituto Federal de Ciência e Tecnologia de São Paulo (IFSP) - *Campus* São Carlos.
+
+# Backend
+Antes de iniciar a utlização do projeto, [acessar o servidor de backend](https://bdtc2-3002837.glitch.me)
+
+## Informações padrões na geração do projeto Angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6.
 
