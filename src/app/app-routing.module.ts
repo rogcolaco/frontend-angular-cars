@@ -7,7 +7,7 @@ const routes: Routes = [
   { path: 'cadastro', component: FormComponent},
   { path: '', component: CardCarComponent},
   { path: '/', component: CardCarComponent},
-  { path: 'frontend-angular-cars/', component: CardCarComponent},
+  { path: '/frontend-angular-cars/', component: CardCarComponent},
   { path: 'frontend-angular-cars/selected/:id', component: FormComponent}
 ];
 
