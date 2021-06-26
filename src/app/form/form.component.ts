@@ -62,6 +62,7 @@ export class FormComponent implements OnInit {
   }
 
   initForm(): void{
+    console.log('init');
     this.carForm = new FormGroup ({
       model: new FormControl(null, [Validators.required, Validators.pattern('[A-Za-zÀ-ü0-9]+')]),
       color: new FormControl (null, [Validators.required, Validators.pattern('[A-Za-zÀ-ü]+')]),
@@ -85,7 +86,9 @@ export class FormComponent implements OnInit {
 
   ngOnInit(): void {
     this.initForm();
+    console.log('pre-if');
     if (this.router.url !== '/frontend-angular-cars/cadastro'){
+      console.log('In-if');
       this.getId();
     }
   }
