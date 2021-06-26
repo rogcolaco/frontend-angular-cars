@@ -73,10 +73,10 @@ export class FormComponent implements OnInit {
     if (this.carForm.valid){
       return true;
     } else {
-      if(this.carForm.errors === null ){
+      /* if(this.carForm.errors === null ){
         alert('Preencha todos os campos dos fomulário');
       } 
-      console.log(this.carForm.errors);
+      console.log(this.carForm.errors); */
       alert('Precha o formulário com valores válidos');
       return false;
     }
