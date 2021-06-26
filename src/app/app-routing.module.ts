@@ -6,6 +6,7 @@ import { FormComponent } from './form/form.component';
 const routes: Routes = [
   { path: 'cadastro', component: FormComponent},
   { path: '', component: CardCarComponent},
+  { path: 'frontend-angular-cars', component: CardCarComponent},
   { path: 'selected/:id', component: FormComponent}
 ];
 
