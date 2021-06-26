@@ -18,7 +18,7 @@ export class CardCarComponent implements OnInit {
   }
 
   selectCar(car: Car): void{
-    location.assign('/frontend-angular-cars/selected/' + car._id);
+    location.assign('/selected/' + car._id);
   }
 
   constructor(

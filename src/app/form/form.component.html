@@ -29,12 +29,12 @@
           </div>
         </div>
   
-        <div class="buttons" *ngIf="router.url === '/frontend-angular-cars/cadastro'">
+        <div class="buttons" *ngIf="router.url === '/cadastro'">
           <button (click)="newCar()">Cadastrar</button>
           <button><a routerLink="">Voltar</a></button>
         </div>
   
-        <div class="buttons" *ngIf="router.url !== '/frontend-angular-cars/cadastro'">
+        <div class="buttons" *ngIf="router.url !== '/cadastro'">
           <button (click)="updateCar()">Alterar Registro</button>
           <button (click)="deleteCar()">Deletar Registro</button>
           <button><a routerLink="">Voltar</a></button>

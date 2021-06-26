@@ -25,7 +25,7 @@ export class FormComponent implements OnInit {
     if (this.checkForm()){
       this.carService.addCar(this.carForm.value).subscribe( res => {
         res.ok ? alert ('Veículo Cadastrado com Sucesso.') : alert ('Falha ao Acessar Banco de Dados.');
-        location.assign('/frontend-angular-cars/');
+        location.assign('/');
       });
     }
   }
@@ -34,7 +34,7 @@ export class FormComponent implements OnInit {
     if (this.checkForm()){
       this.carService.update(this.carForm.value, this.selectedCarById._id).subscribe( res => {
         res.ok ? alert ('Registro Alterado com Sucesso') : alert('Falha ao Alterar Registro');
-        location.assign('/frontend-angular-cars/');
+        location.assign('/');
       });
     }
   }
@@ -42,7 +42,7 @@ export class FormComponent implements OnInit {
   deleteCar(): void{
     this.carService.delete(this.selectedCarById._id).subscribe( res => {
       res.ok ? alert('Registro Deletado com Sucesso') : alert('Falha ao Apagar Registro');
-      location.assign('/frontend-angular-cars/');
+      location.assign('/');
     });
   }
 
@@ -83,7 +83,7 @@ export class FormComponent implements OnInit {
 
   ngOnInit(): void {
     this.initForm();
-    if (this.router.url !== '/frontend-angular-cars/cadastro'){
+    if (this.router.url !== '/cadastro'){
       this.getId();
     }
   }
