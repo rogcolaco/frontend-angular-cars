@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: '', component: CardCarComponent},
   { path: '/', component: CardCarComponent},
   { path: '/frontend-angular-cars/', component: CardCarComponent},
-  { path: 'frontend-angular-cars/selected/:id', component: FormComponent}
+  { path: 'selected/:id', component: FormComponent}
 ];
 
 @NgModule({
