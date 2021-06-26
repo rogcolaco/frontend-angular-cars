@@ -47,7 +47,8 @@ export class FormComponent implements OnInit {
   }
 
   getId(): void {
-    this.selectedId = (this.router.url.split('/')[2]);
+    this.selectedId = (this.router.url.split('/')[3]);
+    console.log(this.selectedId);
     this.carService.getCar(this.selectedId).subscribe((car: Car) => {
       this.selectedCarById = car;
       this.carForm.setValue ({
